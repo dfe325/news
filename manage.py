@@ -1,3 +1,6 @@
+#https://www.pythoncircle.com/post/660/solving-django-error-templatedoesnotexist-at-app_name/
+#templatedoesnotexist at /
+
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
