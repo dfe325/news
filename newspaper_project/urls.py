@@ -1,3 +1,5 @@
+#newspaper_project/urls.py
+
 """newspaper_project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -23,8 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')), # new
     path('users/', include('django.contrib.auth.urls')), # new
+    path('articles/', include('articles.urls')), # new
     path('', include('pages.urls')), # new
     path('', TemplateView.as_view(template_name='home.html'),
       name='home'), # new
-    #path('', TemplateView.as_view(template_name='home.html'), name='home'), # new
 ]
