@@ -6,6 +6,7 @@ from .models import Article, Comment #  new
 
 class CommentInline(admin.TabularInline): # new
     model = Comment
+    extra = 0 #  new
 
 class ArticleAdmin(admin.ModelAdmin): # new
     inlines = [

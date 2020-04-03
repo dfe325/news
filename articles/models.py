@@ -21,7 +21,11 @@ class Article(models.Model):
         return reverse('article_detail', args=[str(self.id)])
 
 class Comment(models.Model): # new
-    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    article = models.ForeignKey(
+        Article,
+        on_delete=models.CASCADE,
+        related_name='comments', #  new
+    )
     comment = models.CharField(max_length=140)
     author = models.ForeignKey(
         get_user_model(),
